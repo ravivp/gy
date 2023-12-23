@@ -1,0 +1,51 @@
+{
+  "vehicle": {
+    "year": "2020",
+    "make": "Acura",
+    "model": "ILX",
+    "rim": "Standard",
+    "zipcode": "44333"
+  },
+  "address": {
+    "zipcode": "44333"
+  },
+  "tireSize": {
+    "tireWidth": "",
+    "aspectRatio": "",
+    "diameter": "",
+    "zipcode": "44333"
+  },
+  "company": [
+    "The Goodyear Brand",
+    "Corporate",
+    "Careers",
+    "International Sites",
+    "Other Goodyear Sites"
+  ],
+  "owner": [
+    "Submit/Check Rebate",
+    "Goodyear Credit Card Login",
+    "Register Tires",
+    "Tire & Service Warranty",
+    "Recalls"
+  ],
+  "support": [
+    "Contact Us",
+    "FAQs",
+    "Returns & Cancellations",
+    "Payment Options",
+    "Store Directory"
+  ],
+  "footerHeader": [
+    "COMPANY",
+    "OWNERS",
+    "SUPPORT",
+    "TALK TO US"
+  ],
+  "services": {
+    "alignment":"Alignment",
+    "rh":"Road Hazard"
+  }
+
+
+}
