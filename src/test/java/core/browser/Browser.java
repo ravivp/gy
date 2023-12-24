@@ -23,6 +23,8 @@ public class Browser {
             option.addArguments("--remote-allow-origins=*");
             option.addArguments("incognito");
             option.addArguments("--headless");
+            option.addArguments("--no-sandbox");
+            option.addArguments("--disable-dev-shm-usage");
             WebDriverManager.chromedriver().clearDriverCache().setup();
 
             driver=new ChromeDriver(option);
