@@ -1,5 +1,6 @@
 package jt.pages;
 
+import core.utils.CustomException;
 import core.utils.Utilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,17 +15,31 @@ public class MiniCart {
         PageFactory.initElements(driver,this);
     }
 
+    @FindBy(css = "button[data-qa-id='pdp-roll-installation-tab']")
+    private WebElement roll;
+
     @FindBy(css = "button[data-qa-id='pdp-in-store-tab']")
     private WebElement inStore;
 
     @FindBy(xpath= "//div[@data-qa-id='quick-view-add-to-cart-product']//button")
     private WebElement addToCarOnMiniCart;
 
-    public void selectInStore(){
-        Utilities.clickOnElement(inStore);
+    public void selectServiceLocation(String serviceLocation){
+
+        if(serviceLocation.equals("roll")){
+            Utilities.clickOnElement(roll);
+        }else if (serviceLocation.equals("inStore")){
+            Utilities.clickOnElement(inStore);
+        }else {
+            throw new CustomException(serviceLocation+ " is not found");
+        }
+
+        Utilities.javaScript(driver,addToCarOnMiniCart);
     }
     public void addToCartOnMiniCart(){
-        Utilities.clickOnElement(addToCarOnMiniCart);
+
+        Utilities.javaScript(driver,addToCarOnMiniCart);
+
     }
 
 }

@@ -90,6 +90,12 @@ public class Utilities {
 
     }
 
+    public static void javaScript(WebDriver driver,WebElement element){
+
+        executor=(JavascriptExecutor)driver;
+        executor.executeScript("arguments[0].click();", element);
+
+    }
     public static void scrollElementIntoView(WebDriver driver,WebElement element){
         executor=(JavascriptExecutor)driver;
         executor.executeScript("arguments[0].scrollIntoView(true);", element);
@@ -224,7 +230,7 @@ public class Utilities {
         try {
 //            int seconds=Integer.parseInt(waitIme)+0;
 //            Thread.sleep(Duration.ofMillis(seconds));
-            Thread.sleep(6000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

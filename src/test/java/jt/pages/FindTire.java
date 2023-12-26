@@ -27,15 +27,23 @@ public class FindTire {
 
     // //div[@class='listoption-title ']
     @FindBy(css = "div.listoption-title")
-    private WebElement selectAutoSuggestionVehicleDetails;
+    private WebElement selectAutoSuggestionOption;
     @FindBy(css = "input[data-qa-id='tire-finder-vehicle-model-input-make']")
     private WebElement searchVehicleMake;
     @FindBy(css = "input[data-qa-id='tire-finder-vehicle-model-input-model']")
     private WebElement searchVehicleModel;
 
+
     //input[data-qa-id='tire-finder-container-input-versionOption']
     @FindBy(css = "input[data-qa-id='tire-finder-vehicle-model-input-versionOption']")
     private WebElement searchVehicleTrim;
+
+    @FindBy(css="input[data-qa-id='tire-finder-vehicle-model-input-rimDiameter']")
+    private WebElement vehicleModelInputRimDiameter;
+
+    @FindBy(css = "div.listoption-subtitle")
+    private WebElement rimAutosuggestionOption;
+
     @FindBy(css = "input[data-qa-id='location-input-open']")
     private WebElement enterAddress;
     @FindBy(css ="button[data-qa-id='vehicleTireFinder-overlay-submit-btn']")
@@ -63,7 +71,7 @@ public class FindTire {
 
         Utilities.clickOnElement(searchVehicleYear);
         Utilities.TypeInField(searchVehicleYear,searchYearKey);
-        Utilities.clickOnElement(selectAutoSuggestionVehicleDetails);
+        Utilities.clickOnElement(selectAutoSuggestionOption);
     }
 
     public void tireFinderVehicleInputMake(String searchMakeKey){
@@ -71,19 +79,19 @@ public class FindTire {
         Utilities.clickOnElement(searchVehicleMake);
         Utilities.TypeInField(searchVehicleMake,searchMakeKey);
       //  Utilities.searchKey();
-        Utilities.clickOnElement(selectAutoSuggestionVehicleDetails);
+        Utilities.clickOnElement(selectAutoSuggestionOption);
     }
 
     public void tireFinderVehicleInputModel(String searchModelKey){
 
         Utilities.clickOnElement(searchVehicleModel);
         Utilities.TypeInField(searchVehicleModel,searchModelKey);
-        Utilities.clickOnElement(selectAutoSuggestionVehicleDetails);
+        Utilities.clickOnElement(selectAutoSuggestionOption);
     }
     public void tireFinderVehicleInputTrim(String searchTrimKey){
         Utilities.clickOnElement(searchVehicleTrim);
         Utilities.TypeInField(searchVehicleTrim,searchTrimKey);
-        Utilities.clickOnElement(selectAutoSuggestionVehicleDetails);
+        Utilities.clickOnElement(selectAutoSuggestionOption);
     }
 
     public void findTiresButton(){
@@ -113,16 +121,16 @@ public class FindTire {
 
         Utilities.clickOnElement(searchTireWidth);
         Utilities.TypeInField(searchTireWidth,tireWidth);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
 
 
         Utilities.clickOnElement(searchTireAspectRatio);
         Utilities.TypeInField(searchTireAspectRatio,aspectRatio);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
 
         Utilities.clickOnElement(searchTireRimDiameter);
         Utilities.TypeInField(searchTireRimDiameter,diameter);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
 
         enterFullAddressOrZIP(zipcode);
         Utilities.clickOnElement(tireSizeTireFinderButton);
@@ -139,14 +147,14 @@ public class FindTire {
     public void tireFinderTireSizeInputWidTh(String tireWidth){
         Utilities.clickOnElement(searchTireWidth);
         Utilities.TypeInField(searchTireWidth,tireWidth);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
     }
 
     public void tireFinderTireSizeInputAspectRatio(String aspectRatio){
 
         Utilities.clickOnElement(searchTireAspectRatio);
         Utilities.TypeInField(searchTireAspectRatio,aspectRatio);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
 
 
 
@@ -154,7 +162,7 @@ public class FindTire {
     public void tireFinderTireSizeInputDiameter(String diameter){
         Utilities.clickOnElement(searchTireRimDiameter);
         Utilities.TypeInField(searchTireRimDiameter,diameter);
-        Utilities.javaScriptExecutor(driver,selectAutoSuggestionVehicleDetails);
+        Utilities.javaScriptExecutor(driver,selectAutoSuggestionOption);
     }
     public void clickOnTireSizeButton(){
         Utilities.clickOnElement(tireSizeTireFinderButton);

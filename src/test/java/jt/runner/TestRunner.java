@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         monochrome = true,
         publish = true,
 
-        dryRun = false
-       // tags = "@SanityTest"
+        dryRun = false,
+        tags = "@SmokeTest"
 )
 public class TestRunner {
 

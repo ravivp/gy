@@ -3,15 +3,16 @@ package jt.steps;
 import core.context.Apps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class MiniCartSteps {
 
     public Apps apps=new Apps();
 
-    @Then("I select inStore on Mini Cart")
-    public void selectInStoreOnMiniCart(){
+    @When("I select {string} installer Mini Cart")
+    public void selectServiceLocationOnMiniCart(String selectLocation){
 
-        apps.miniCart.selectInStore();
+        apps.miniCart.selectServiceLocation(selectLocation);
     }
     @Then("I click on add to cart on Mini Cart")
     public void addToCartOnMiniCart(){

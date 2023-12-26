@@ -2,6 +2,7 @@ Feature: Verify Global footer section
   Background:
     Given I launch the application
 
+    @SmokeTest
   Scenario: Verify Footer details
     Given I accept the cookies
     When I wait for "5" seconds
