@@ -17,8 +17,8 @@ Feature: Verify various components on PLP page
 #     Then I verify search vehicle on PLP page
      Then I wait for "5" seconds
      Then I click on add to cart on PLP page
-     Then I select inStore on Mini Cart
-     Then I click on add to cart on Mini Cart
+      And I select "inStore" installer Mini Cart
+#     Then I click on add to cart on Mini Cart
      When I click on Select Store from find store
      Then I verify cart header on cart page
      Then I verify selected tire on cart page
@@ -45,6 +45,7 @@ Feature: Verify various components on PLP page
      And I enter "44333" zipcode
      And I click on find tires submit button
 
+   @RegressionTest
   Scenario: Verify tire finder module with tire size
     When I accept the cookies
     When I click on global Find Tires

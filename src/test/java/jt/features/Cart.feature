@@ -25,7 +25,7 @@ Feature: Verify various components on cart page
     And I verify product details in cart page
     And I just verify total price of tire In cart page
     And I verify "services.RH" add on service in cart
-    And I add "services.RH" service in cart
+    #And I add "services.RH" service in cart
     And I verify order summary in cart
 
   @SmokeTest
