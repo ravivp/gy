@@ -11,12 +11,13 @@ import org.junit.runner.RunWith;
         glue ={"jt.steps","jt.Hooks"},
         plugin = {"pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+               // "jt.steps.ReportPlugin"
         },
         monochrome = true,
         publish = true,
 
-        dryRun = false,
-        tags = "@SmokeTest"
+        dryRun = false
+        //tags = "@SmokeTest"
 )
 public class TestRunner {
 

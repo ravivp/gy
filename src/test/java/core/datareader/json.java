@@ -36,7 +36,7 @@ public class json {
     synchronized public static VehicleTestData getVehicleTestData(String key){
 
         HashMap<String,String> vehicleDataInKeyValue= (HashMap<String, String>) getJsonData.get(key);
-        System.out.println(vehicleDataInKeyValue.toString());
+
        return vehicleTestData= (VehicleTestData) parseHashMapToObject(vehicleDataInKeyValue,VehicleTestData.class);
 
     }

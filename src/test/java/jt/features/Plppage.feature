@@ -2,6 +2,7 @@ Feature: Verify various components on PLP page
    Background:
      Given I launch the application
 
+  @RegressionTest
    Scenario: Verify various components on PLP
      When I accept the cookies
 #     When I click on find store link on Global header
@@ -24,6 +25,7 @@ Feature: Verify various components on PLP page
      And I verify product details in cart page
      And I just verify total price of tire In cart page
 
+    @SmokeTest
    Scenario: Verify various components on PLP page by tire size
      When I accept the cookies
      When I click on global Find Tires
@@ -31,6 +33,7 @@ Feature: Verify various components on PLP page
      When I click on Tire Size tab
      When I search tireWidth "215" aspectRatio "45" rimDiameter "17" and zipcode "44333"
 
+      @SanityTest
    Scenario: Verify tire search with vehicle details from test data file
      When I accept the cookies
      When I click on global Find Tires
