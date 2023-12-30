@@ -3,7 +3,7 @@ Feature: Verify various components on cart page
   Background:
     Given I launch the application
 
-  #@SanityTest
+  @SanityTest
   Scenario: Verify components in cart page for roll mobile
     Given I accept the cookies
     When I click on global Find Tires
