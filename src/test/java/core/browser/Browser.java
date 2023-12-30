@@ -22,9 +22,9 @@ public class Browser {
             ChromeOptions option= new ChromeOptions();
             option.addArguments("--remote-allow-origins=*");
             option.addArguments("incognito");
-            option.addArguments("--headless");
+           // option.addArguments("--headless");
             option.addArguments("--no-sandbox");
-            //option.addArguments("--disable-dev-shm-usage");
+            option.addArguments("--disable-dev-shm-usage");
             WebDriverManager.chromedriver().clearDriverCache().setup();
 
             driver=new ChromeDriver(option);
@@ -54,7 +54,7 @@ public class Browser {
 
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         getDriver().manage().deleteAllCookies();
 
         return getDriver();

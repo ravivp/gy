@@ -14,7 +14,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-
+       <!-- <maven.compiler.version>3.8.1</maven.compiler.version>
+        <junit-jupiter-api>5.8.2</junit-jupiter-api>
+        <maven.failsafe.version>2.22.2</maven.failsafe.version>
+        <maven.surefire.version>2.22.2</maven.surefire.version>-->
     </properties>
 
   <dependencies>
@@ -91,11 +94,11 @@
       <artifactId>extentreports-cucumber7-adapter</artifactId>
       <version>1.7.0</version>
     </dependency>
-    <dependency>
+  <!--  <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.33</version>
-    </dependency>
+    </dependency>-->
 
     <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
     <dependency>
@@ -107,11 +110,11 @@
 
 
       <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-      <dependency>
+     <!-- <dependency>
           <groupId>org.apache.logging.log4j</groupId>
           <artifactId>log4j-core</artifactId>
           <version>2.20.0</version>
-      </dependency>
+      </dependency>-->
 
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
@@ -158,18 +161,73 @@
 
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+<!--                <version>2.22.2</version>-->
+                <version>3.0.0-M1</version>
                 <configuration>
                     <includes>
-                        <include>jt.runner.TestRunner.java</include>
+<!--                        <include>jt.runner.TestRunner.java</include>-->
+                        <include>**/TestRunner.java</include>
                     </includes>
                     <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
+<!--                    <threadCount>3</threadCount>-->
+
                     <useUnlimitedThreads>true</useUnlimitedThreads>
-<!--                    <testFailureIgnore>true</testFailureIgnore>-->
+<!--                    <testFailureIgnore>false</testFailureIgnore>-->
                 </configuration>
 
             </plugin>
+          <!--  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+&lt;!&ndash;                <version>3.8.6</version>&ndash;&gt;
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <fork>true</fork>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>-->
+
+            <!--<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>${maven.surefire.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven.failsafe.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                        <configuration>
+
+                            <includes>
+                                &lt;!&ndash; UNCOMMENT BELOW LINE - To execute feature files with single runner &ndash;&gt;
+                                <include>**/TestRunner.java</include>
+                            </includes>
+                            &lt;!&ndash; UNCOMMENT BELOW 3 LINES - To execute using parallel or combination option &ndash;&gt;
+                            <parallel>methods</parallel>
+                            <threadCount>4</threadCount>
+                            <perCoreThreadCount>true</perCoreThreadCount>
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
+
+
         </plugins>
         </pluginManagement>
     </build>

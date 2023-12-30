@@ -2,7 +2,7 @@ Feature: Verify various components on PLP page
    Background:
      Given I launch the application
 
-  @RegressionTest
+#  @RegressionTest
    Scenario: Verify various components on PLP
      When I accept the cookies
 #     When I click on find store link on Global header
@@ -45,7 +45,7 @@ Feature: Verify various components on PLP page
      And I enter "44333" zipcode
      And I click on find tires submit button
 
-   @RegressionTest
+#   @RegressionTest
   Scenario: Verify tire finder module with tire size
     When I accept the cookies
     When I click on global Find Tires

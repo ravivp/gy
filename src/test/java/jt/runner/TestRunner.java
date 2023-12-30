@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         publish = true,
 
         dryRun = false
-        //tags = "@SmokeTest"
+        //tags = "@SanityTest"
 )
 public class TestRunner {
 
