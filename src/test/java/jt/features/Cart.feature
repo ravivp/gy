@@ -7,7 +7,6 @@ Feature: Verify various components on cart page
   Scenario: Verify components in cart page for roll mobile
     Given I accept the cookies
     When I click on global Find Tires
-#     When I just on click on vehicle tap
     When I wait for "5" seconds
     When I enter "Vehicle.Year" in Enter Vehicle Year text box and select Combobox
     And I enter "Vehicle.Make" in Enter Vehicle Make text box and select Combobox
@@ -28,11 +27,10 @@ Feature: Verify various components on cart page
     #And I add "services.RH" service in cart
     And I verify order summary in cart
 
-  #@SmokeTest
+  @SmokeTest
   Scenario: Verify components in cart for inStore installation
     Given I accept the cookies
     When I click on global Find Tires
-#     When I just on click on vehicle tap
     When I wait for "5" seconds
     When I enter "Vehicle.Year" in Enter Vehicle Year text box and select Combobox
     And I enter "Vehicle.Make" in Enter Vehicle Make text box and select Combobox
