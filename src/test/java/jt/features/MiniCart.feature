@@ -1,7 +1,7 @@
 Feature: Verify all components in Mini Cart
 
   Background:
-    Given I launch the simple application
+    Given I launch the application
 
   Scenario: Verify various components in mini cart by passing vehicle details
     Given I accept the cookies
