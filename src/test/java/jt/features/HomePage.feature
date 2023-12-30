@@ -4,8 +4,8 @@ Feature: Verify Home Page Components
     Given I launch the application
 
 
-#  @SanityTest @SmokeTest @RegressionTest
+   @SanityTest
   Scenario: Verify various components on home page
     When I accept the cookies
 #    When I am on Home page
-#    Then I verify Home page title
+   Then I verify Home page title

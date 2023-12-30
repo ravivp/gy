@@ -44,8 +44,7 @@ Feature: Verify various components on PLP page
      And I provided data "vehicle.Rim" in vehicle Model Rim tablet
      And I enter "44333" zipcode
      And I click on find tires submit button
-
-#   @RegressionTest
+  @RegressionTest
   Scenario: Verify tire finder module with tire size
     When I accept the cookies
     When I click on global Find Tires
